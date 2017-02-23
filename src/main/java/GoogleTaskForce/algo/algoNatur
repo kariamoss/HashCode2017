@@ -1,5 +1,31 @@
-while(hasEndPoint)
-    while(hasVideoNotPlacedInCache && cacheNotFull)
-        trouver la video la plus demandée et non placée
-        trouver le cache le plus proche et qui peut stocker la video
-        placer la video dans le cache
+while(hasEndPoint())
+    EndPoint = getEndPoint()
+    while(hasVideo(EndPoint)))
+        Video = getVideo(EndPoint)
+        while(cacheNotFull(EndPoint,Video))
+            putVideo(EndPoint,Video)
+
+
+boolean hasEndPoint(){
+    svoir s'il reste un end Point à traiter
+}
+
+EndPoint getEndPoint(){
+retrun le prochain endPoint à traiter
+}
+
+boolean hasVideo(EndPoint){
+est ce que le end Point à des video non placé dans le cache
+}
+
+Video getVideo(EndPoint){
+return la video non placé et la plus demandée
+}
+
+boolean cacheNotFull(EndPoint,Video){
+est ce que un cache relier à ce endpoint est capable de stocker la video spécifiée
+}
+
+void putVideo(EndPoint,Video){
+place la video spécifier dans le cache le plus proche du endPoint
+}
