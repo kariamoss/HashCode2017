@@ -36,4 +36,13 @@ public class EndPointTest {
         assertTrue(!point.operationPossible().isPresent());
     }
 
+    @Test
+    public void basic3(){
+        point.addCacheConnected(new Cache(500));
+        point.addCacheConnected(new Cache(500));
+        point.addCacheConnected(new Cache(500));
+        point.addCacheConnected(new Cache(500));
+        System.out.println(point.fittingCache(new Video(20,20)));
+    }
+
 }

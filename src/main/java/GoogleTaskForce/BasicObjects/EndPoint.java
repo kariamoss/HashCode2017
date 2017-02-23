@@ -71,7 +71,7 @@ public class EndPoint {
 
     public List<Cache> fittingCache(Video video){
         List<Cache> caches = new ArrayList<>();
-        for(Cache cache : caches){
+        for(Cache cache : this.cacheConnected){
             if(cache.videoFit(video)) caches.add(cache);
         }
         return caches;
