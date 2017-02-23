@@ -18,4 +18,8 @@ public class EndPoint {
     void addCacheConnected(Cache cache){
         cacheConnected.add(cache);
     }
+
+    boolean isConnectedToCache(){
+        return cacheConnected.isEmpty();
+    }
 }

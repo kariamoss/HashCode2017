@@ -1,5 +1,10 @@
 package GoogleTaskForce;
 
+import GoogleTaskForce.BasicObjects.EndPoint;
+import GoogleTaskForce.BasicObjects.Latency;
+import GoogleTaskForce.BasicObjects.Request;
+import GoogleTaskForce.BasicObjects.Video;
+
 import java.awt.*;
 import java.util.*;
 import java.util.List;
@@ -8,39 +13,32 @@ import java.util.List;
  * This class handle the context of the simulation
  */
 public class Context {
-    private int nbVid;
-    private int nbEndPoint;
-    private int nbRequest;
-    private int nbCache;
-    private int sizeCache;
+    List<EndPoint> endPoints;
+    List<Request> requests;
+    List<Video> videos;
+    List<Latency> latencies;
 
 
-    public Context(int nbVid, int nbEndPoint, int nbRequest, int nbCache, int sizeCache) {
-        this.nbVid = nbVid;
-        this.nbEndPoint = nbEndPoint;
-        this.nbRequest = nbRequest;
-        this.nbCache = nbCache;
-        this.sizeCache = sizeCache;
+    public Context() {
+        endPoints = new ArrayList<EndPoint>();
+        requests = new ArrayList<Request>();
+        videos = new ArrayList<Video>();
+        latencies = new ArrayList<Latency>();
     }
 
-    public int getNbVid() {
-        return nbVid;
+    public void addEndPoint(EndPoint endPoint){
+        endPoints.add(endPoint);
     }
 
-    public int getNbEndPoint() {
-        return nbEndPoint;
+    public void addReqest(Request request){
+        requests.add(request);
     }
 
-    public int getNbRequest() {
-        return nbRequest;
+    public void addVideo(Video video){
+        videos.add(video);
     }
 
-    public int getNbCache() {
-        return nbCache;
+    public void addLatency(Latency latency){
+        latencies.add(latency);
     }
-
-    public int getSizeCache() {
-        return sizeCache;
-    }
-
 }
