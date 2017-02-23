@@ -26,10 +26,26 @@ public class EndPoint {
         return cacheConnected.isEmpty();
     }
 
+    public List<Cache> getCacheConnected() {
+        return cacheConnected;
+    }
+
+    public List<Request> getRequests() {
+        return requests;
+    }
+
+    public int getDataCenterLatency() {
+        return dataCenterLatency;
+    }
+
     public void addRequest(Request req){
         requests.add(req);
     }
 
+    /**
+     * Regarde si une vidéo peut être placée dans un cache
+     * @return
+     */
     public Optional<Video> operationPossible(){
         for(Request req : requests){
             if(isRequestSat(req)) continue;

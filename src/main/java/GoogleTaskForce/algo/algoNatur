@@ -6,20 +6,12 @@ while(hasEndPoint())
             putVideo(EndPoint,Video)
 
 
-boolean hasEndPoint(){
-    svoir s'il reste un end Point à traiter
-}
-
-EndPoint getEndPoint(){
-retrun le prochain endPoint à traiter
-}
-
 boolean hasVideo(EndPoint){
 est ce que le end Point à des video non placé dans le cache
 }
 
 Video getVideo(EndPoint){
-return la video non placé et la plus demandée
+    return la video non placé et la plus demandée
 }
 
 boolean cacheNotFull(EndPoint,Video){

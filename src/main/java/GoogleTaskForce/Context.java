@@ -72,5 +72,36 @@ public class Context {
         return Optional.empty();
     }
 
+    public boolean hasEndPoint(){
+        for(EndPoint point : endPoints){
+            if(point.operationPossible().isPresent()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * est ce que le end Point a des video non placé dans le cache
+     * @param endPoint
+     * @return
+     */
+    public boolean hasNonPlacedVideo(EndPoint endPoint){
+        boolean isHere;
+        for(Request request : endPoint.getRequests()) {
+            isHere = false;
+            for(Cache cache : caches){
+                if (cache.hasVideo(request.getVideo())) {
+                    isHere = true;
+                }
+            }
+            if(!isHere) return false;
+        }
+        return true;
+    }
+
+    public Video getVideoToPlace(EndPoint endPoint){
+        return null;
+    }
 
 }
