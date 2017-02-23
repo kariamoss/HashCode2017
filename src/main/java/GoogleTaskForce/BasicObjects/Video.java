@@ -5,8 +5,10 @@ package GoogleTaskForce.BasicObjects;
  */
 public class Video {
     int size;
+    int id;
 
-    public Video(int size) {
+    public Video(int id, int size) {
+        this.id = id;
         this.size = size;
     }
 }

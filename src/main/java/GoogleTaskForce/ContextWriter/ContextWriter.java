@@ -1,5 +1,6 @@
 package GoogleTaskForce.ContextWriter;
 
+import GoogleTaskForce.BasicObjects.Cache;
 import GoogleTaskForce.Context;
 
 import java.io.IOException;
@@ -18,8 +19,12 @@ public class ContextWriter {
     public void printRes(){
         try{
             PrintWriter writer = new PrintWriter("output.out", "UTF-8");
-            writer.println("The first line");
-            writer.println("The second line");
+            writer.println(context.nbCacheNotEmpty());
+            for(int i = 0; i < context.nbCacheNotEmpty(); i++){
+                Cache cache = context.getCacheById(i);
+                writer.print(i);
+                writer.println(cache);
+            }
             writer.close();
         } catch (IOException e) {
             // do something

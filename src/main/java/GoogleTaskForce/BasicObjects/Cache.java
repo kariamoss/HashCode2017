@@ -22,4 +22,13 @@ public class Cache {
     public boolean isEmpty(){
         return videos.isEmpty();
     }
+
+    @Override
+    public String toString(){
+        String res = "";
+        for(Video video : videos){
+            res += " " + video.id ;
+        }
+        return res;
+    }
 }
