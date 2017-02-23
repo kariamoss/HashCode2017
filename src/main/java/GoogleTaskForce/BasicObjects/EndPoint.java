@@ -1,4 +1,4 @@
-package GoogleTaskForce;
+package GoogleTaskForce.BasicObjects;
 
 import java.util.ArrayList;
 import java.util.List;

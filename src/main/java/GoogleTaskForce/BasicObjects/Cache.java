@@ -1,4 +1,4 @@
-package GoogleTaskForce;
+package GoogleTaskForce.BasicObjects;
 
 /**
  * Created by Jehan on 23/02/2017, 19:09.
