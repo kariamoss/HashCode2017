@@ -33,6 +33,10 @@ public class Context {
         return i;
     }
 
+    public Cache getCacheById(int id){
+        return caches.get(id);
+    }
+
     public void addEndPoint(EndPoint endPoint){
         endPoints.add(endPoint);
     }
