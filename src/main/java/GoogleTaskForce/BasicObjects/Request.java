@@ -16,6 +16,8 @@ public class Request {
         return video.size;
     }
 
+    public int getNbRequest(){ return nbRequest; }
+
     public Video getVideo(){
         return video;
     }
