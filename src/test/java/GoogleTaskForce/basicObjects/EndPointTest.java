@@ -29,4 +29,11 @@ public class EndPointTest {
         assertTrue(!point.operationPossible().isPresent());
     }
 
+    @Test
+    public void basic2(){
+        point.addRequest(new Request(1500,new Video(7,20)));
+        point.addCacheConnected(new Cache(10));
+        assertTrue(!point.operationPossible().isPresent());
+    }
+
 }
