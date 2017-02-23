@@ -44,4 +44,8 @@ public class Cache {
         int size = request.getVideoSize();
         return spaceLeft()>size;
     }
+
+    public boolean hasVideo(Video video){
+        return videos.contains(video);
+    }
 }

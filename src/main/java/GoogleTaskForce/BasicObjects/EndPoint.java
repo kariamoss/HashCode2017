@@ -2,6 +2,7 @@ package GoogleTaskForce.BasicObjects;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by Jehan on 23/02/2017, 19:08.
@@ -29,14 +30,24 @@ public class EndPoint {
         requests.add(req);
     }
 
-    public boolean operationPossible(){
+    public Optional<Video> operationPossible(){
         for(Request req : requests){
+            if(isRequestSat(req)) continue;
             for(Cache cache : cacheConnected){
-                if(cache.requestFit(req)) return true;
+                if(cache.requestFit(req)) return Optional.of(req.getVideo());
             }
+        }
+        return Optional.empty();
+    }
+
+    public boolean isRequestSat(Request req){
+        for(Cache cache : cacheConnected){
+            if(cache.hasVideo(req.getVideo()))return true;
         }
         return false;
     }
+
+
 
 
 }

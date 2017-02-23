@@ -17,4 +17,8 @@ public class Request {
     public int getVideoSize(){
         return video.size;
     }
+
+    public Video getVideo(){
+        return video;
+    }
 }

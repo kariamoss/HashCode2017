@@ -53,8 +53,10 @@ public class Context {
 
     public Optional<EndPoint> getEndPoint(){
         for(EndPoint point : endPoints){
-            if(point.operationPossible())return Optional.of(point);
+            if(point.operationPossible().isPresent())return Optional.of(point);
         }
         return Optional.empty();
     }
+
+
 }
