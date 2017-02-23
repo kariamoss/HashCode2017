@@ -1,0 +1,5 @@
+while(hasEndPoint)
+    while(hasVideoNotPlacedInCache && cacheNotFull)
+        trouver la video la plus demandée et non placée
+        trouver le cache le plus proche et qui peut stocker la video
+        placer la video dans le cache
