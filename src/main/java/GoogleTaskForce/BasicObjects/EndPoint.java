@@ -47,6 +47,24 @@ public class EndPoint {
         return false;
     }
 
+    public void closestCache(Video video){
+        List<Cache> fittingCache = fittingCache(video);
+
+        for(Cache cache : fittingCache){
+
+        }
+    }
+
+    private List<Cache> fittingCache(Video video){
+        List<Cache> caches = new ArrayList<>();
+        for(Cache cache : caches){
+            if(cache.videoFit(video)) caches.add(cache);
+        }
+        return caches;
+    }
+
+
+
 
 
 

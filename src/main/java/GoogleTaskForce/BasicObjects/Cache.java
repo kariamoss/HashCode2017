@@ -45,9 +45,16 @@ public class Cache {
         return spaceLeft()>size;
     }
 
+    public boolean videoFit(Video video){
+        int size = video.size;
+        return spaceLeft()>size;
+    }
+
     public boolean hasVideo(Video video){
         return videos.contains(video);
     }
 
-    public
+    public void putVideo(Video video){
+        videos.add(video);
+    }
 }
