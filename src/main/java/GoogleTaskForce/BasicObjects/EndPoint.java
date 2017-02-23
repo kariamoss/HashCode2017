@@ -8,11 +8,13 @@ import java.util.List;
  */
 public class EndPoint {
     List<Cache> cacheConnected;
+    private List<Request> requests;
     int dataCenterLatency;
 
     public EndPoint(int dataCenterLatency) {
         cacheConnected = new ArrayList<Cache>();
         this.dataCenterLatency = dataCenterLatency;
+        requests = new ArrayList<>();
     }
 
     void addCacheConnected(Cache cache){
@@ -22,4 +24,10 @@ public class EndPoint {
     boolean isConnectedToCache(){
         return cacheConnected.isEmpty();
     }
+
+    public void addRequest(Request req){
+        requests.add(req);
+    }
+
+
 }

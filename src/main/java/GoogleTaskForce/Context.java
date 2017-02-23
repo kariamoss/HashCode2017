@@ -11,14 +11,12 @@ import java.util.List;
  */
 public class Context {
     List<EndPoint> endPoints;
-    List<Request> requests;
     List<Cache> caches;
     List<Latency> latencies;
 
 
     public Context() {
         endPoints = new ArrayList<EndPoint>();
-        requests = new ArrayList<Request>();
         caches = new ArrayList<Cache>();
         latencies = new ArrayList<Latency>();
     }
@@ -41,8 +39,8 @@ public class Context {
         endPoints.add(endPoint);
     }
 
-    public void addReqest(Request request){
-        requests.add(request);
+    public void addReqest(Request request,int endPointid){
+        endPoints.get(endPointid).addRequest(request);
     }
 
     public void addCache(Cache cache){
@@ -52,4 +50,6 @@ public class Context {
     public void addLatency(Latency latency){
         latencies.add(latency);
     }
+
+
 }
