@@ -51,5 +51,10 @@ public class Context {
         latencies.add(latency);
     }
 
-
+    public Optional<EndPoint> getEndPoint(){
+        for(EndPoint point : endPoints){
+            if(point.operationPossible())return Optional.of(point);
+        }
+        return Optional.empty();
+    }
 }

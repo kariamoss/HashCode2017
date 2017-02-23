@@ -32,9 +32,10 @@ public class EndPoint {
     public boolean operationPossible(){
         for(Request req : requests){
             for(Cache cache : cacheConnected){
-
+                if(cache.requestFit(req)) return true;
             }
         }
+        return false;
     }
 
 
