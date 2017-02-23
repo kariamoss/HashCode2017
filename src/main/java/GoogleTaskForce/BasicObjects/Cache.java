@@ -55,6 +55,6 @@ public class Cache {
     }
 
     public void putVideo(Video video){
-        videos.add(video);
+        if(!videos.contains(video)) videos.add(video);
     }
 }
