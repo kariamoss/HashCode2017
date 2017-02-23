@@ -13,6 +13,5 @@ public class Video {
     public Video(int id, int size) {
         this.id = id;
         this.size = size;
-
     }
 }

@@ -6,12 +6,10 @@ package GoogleTaskForce.BasicObjects;
 public class Request {
     int nbRequest;
     Video video;
-    EndPoint endPoint;
 
-    public Request(int nbRequest, Video video, EndPoint endPoint) {
+    public Request(int nbRequest, Video video) {
         this.nbRequest = nbRequest;
         this.video = video;
-        this.endPoint = endPoint;
     }
 
     public int getVideoSize(){

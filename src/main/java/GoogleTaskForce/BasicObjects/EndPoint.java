@@ -12,16 +12,16 @@ public class EndPoint {
     int dataCenterLatency;
 
     public EndPoint(int dataCenterLatency) {
-        cacheConnected = new ArrayList<Cache>();
+        cacheConnected = new ArrayList<>();
         this.dataCenterLatency = dataCenterLatency;
         requests = new ArrayList<>();
     }
 
-    void addCacheConnected(Cache cache){
+    public void addCacheConnected(Cache cache){
         cacheConnected.add(cache);
     }
 
-    boolean isConnectedToCache(){
+    public boolean isConnectedToCache(){
         return cacheConnected.isEmpty();
     }
 
