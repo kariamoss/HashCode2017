@@ -69,7 +69,7 @@ public class EndPoint {
         return fittingCache.get(0);
     }
 
-    private List<Cache> fittingCache(Video video){
+    public List<Cache> fittingCache(Video video){
         List<Cache> caches = new ArrayList<>();
         for(Cache cache : caches){
             if(cache.videoFit(video)) caches.add(cache);
