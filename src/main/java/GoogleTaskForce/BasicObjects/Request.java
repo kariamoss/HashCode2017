@@ -13,4 +13,8 @@ public class Request {
         this.video = video;
         this.endPoint = endPoint;
     }
+
+    public int getVideoSize(){
+        return video.size;
+    }
 }

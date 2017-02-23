@@ -29,5 +29,13 @@ public class EndPoint {
         requests.add(req);
     }
 
+    public boolean operationPossible(){
+        for(Request req : requests){
+            for(Cache cache : cacheConnected){
+
+            }
+        }
+    }
+
 
 }

@@ -31,4 +31,17 @@ public class Cache {
         }
         return res;
     }
+
+    public int spaceLeft(){
+        int actSize = size;
+        for(Video vid :videos){
+            actSize -= vid.size;
+        }
+        return actSize;
+    }
+
+    public boolean requestFit(Request request){
+        int size = request.getVideoSize();
+        return spaceLeft()>size;
+    }
 }
