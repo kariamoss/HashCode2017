@@ -26,7 +26,7 @@ public class Context {
     public int nbCacheNotEmpty(){
         int i = 0;
         for (Cache cache : caches){
-            if (cache.isEmpty()) {
+            if (!cache.isEmpty()) {
                 i++;
             }
         }
