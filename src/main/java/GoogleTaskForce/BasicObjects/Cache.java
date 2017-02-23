@@ -18,4 +18,8 @@ public class Cache {
     public void addVideo(Video video){
         videos.add(video);
     }
+
+    public boolean isEmpty(){
+        return videos.isEmpty();
+    }
 }

@@ -1,9 +1,6 @@
 package GoogleTaskForce;
 
-import GoogleTaskForce.BasicObjects.EndPoint;
-import GoogleTaskForce.BasicObjects.Latency;
-import GoogleTaskForce.BasicObjects.Request;
-import GoogleTaskForce.BasicObjects.Video;
+import GoogleTaskForce.BasicObjects.*;
 
 import java.awt.*;
 import java.util.*;
@@ -15,15 +12,25 @@ import java.util.List;
 public class Context {
     List<EndPoint> endPoints;
     List<Request> requests;
-    List<Video> videos;
+    List<Cache> caches;
     List<Latency> latencies;
 
 
     public Context() {
         endPoints = new ArrayList<EndPoint>();
         requests = new ArrayList<Request>();
-        videos = new ArrayList<Video>();
+        caches = new ArrayList<Cache>();
         latencies = new ArrayList<Latency>();
+    }
+
+    public int nbCacheNotEmpty(){
+        int i = 0;
+        for (Cache cache : caches){
+            if (cache.isEmpty()) {
+                i++;
+            }
+        }
+        return i;
     }
 
     public void addEndPoint(EndPoint endPoint){
@@ -34,8 +41,8 @@ public class Context {
         requests.add(request);
     }
 
-    public void addVideo(Video video){
-        videos.add(video);
+    public void addCache(Cache cache){
+        caches.add(cache);
     }
 
     public void addLatency(Latency latency){
