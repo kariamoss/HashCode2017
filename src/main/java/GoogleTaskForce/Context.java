@@ -13,12 +13,14 @@ public class Context {
     List<EndPoint> endPoints;
     List<Cache> caches;
     List<Latency> latencies;
+    List<Video> videos;
 
 
     public Context() {
-        endPoints = new ArrayList<EndPoint>();
-        caches = new ArrayList<Cache>();
-        latencies = new ArrayList<Latency>();
+        endPoints = new ArrayList<>();
+        caches = new ArrayList<>();
+        latencies = new ArrayList<>();
+        videos = new ArrayList<>();
     }
 
     public int nbCacheNotEmpty(){
@@ -35,16 +37,28 @@ public class Context {
         return caches.get(id);
     }
 
+    public Video getVideoById(int id){
+        return videos.get(id);
+    }
+
+    public EndPoint getEndPointById(int id){
+        return endPoints.get(id);
+    }
+
     public void addEndPoint(EndPoint endPoint){
         endPoints.add(endPoint);
     }
 
-    public void addReqest(Request request,int endPointid){
+    public void addRequest(Request request,int endPointid){
         endPoints.get(endPointid).addRequest(request);
     }
 
     public void addCache(Cache cache){
         caches.add(cache);
+    }
+
+    public void addVideo(Video video){
+        videos.add(video);
     }
 
     public void addLatency(Latency latency){

@@ -8,6 +8,9 @@ public class Main
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        String contextPath = args[0];
+        Context context = new Context();
+        new ContextReader(contextPath, context);
+        System.out.println("yosh");
     }
 }
