@@ -63,12 +63,10 @@ public class EndPoint {
         return false;
     }
 
-    public void closestCache(Video video){
+    public Cache closestCache(Video video){
         List<Cache> fittingCache = fittingCache(video);
-
-        for(Cache cache : fittingCache){
-
-        }
+        //deal with latency later
+        return fittingCache.get(0);
     }
 
     private List<Cache> fittingCache(Video video){
