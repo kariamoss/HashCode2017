@@ -105,7 +105,7 @@ public class Context {
         Video video = null;
         for(Request request : endPoint.getRequests()) {
             for(Cache cache : caches){
-                if (cache.hasVideo(request.getVideo()) && nbRequestMax < request.getNbRequest()) {
+                if (!cache.hasVideo(request.getVideo()) && nbRequestMax < request.getNbRequest()) {
                     nbRequestMax = request.getNbRequest();
                     video = request.getVideo();
                 }
